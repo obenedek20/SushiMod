@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.oscarcaleb.sushimod.item.ModItems;
 import org.slf4j.Logger;
+import net.minecraft.world.item.CreativeModeTabs;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SushiMod.MOD_ID)
@@ -38,8 +39,6 @@ public class SushiMod {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -49,7 +48,9 @@ public class SushiMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RICE); //rice added to ingredients tab
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
