@@ -21,6 +21,8 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RICE.get());
                         pOutput.accept(ModItems.UNI.get()); //only need .get() for custome items
+                        pOutput.accept(ModItems.SALMON_PIECE.get());
+                        pOutput.accept(ModItems.TUNA_PIECE.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

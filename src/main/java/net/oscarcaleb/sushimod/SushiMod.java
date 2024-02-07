@@ -54,6 +54,8 @@ public class SushiMod {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.RICE); //rice added to ingredients tab
             event.accept(ModItems.UNI);
+            event.accept(ModItems.SALMON_PIECE);
+            event.accept(ModItems.TUNA_PIECE);
         }
     }
 
