@@ -17,6 +17,9 @@ public class ModItems {
     //adding an item
     public static final RegistryObject<Item> RICE = ITEMS.register("rice",
             () -> new Item(new Item.Properties())); //does not create texture, name, or add to creative mode tab
+
+    public static final RegistryObject<Item> DRIED_SEAWEED = ITEMS.register("dried_seaweed",
+            () -> new Item(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }

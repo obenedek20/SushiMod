@@ -13,6 +13,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.oscarcaleb.sushimod.item.ModCreativeModeTabs;
 import net.oscarcaleb.sushimod.item.ModItems;
 import org.slf4j.Logger;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -30,6 +31,8 @@ public class SushiMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -50,6 +53,7 @@ public class SushiMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.RICE); //rice added to ingredients tab
+            event.accept(ModItems.DRIED_SEAWEED);
         }
     }
 
