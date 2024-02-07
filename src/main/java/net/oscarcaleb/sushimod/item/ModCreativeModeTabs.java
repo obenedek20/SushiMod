@@ -20,7 +20,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.sushi_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RICE.get());
-                        pOutput.accept(ModItems.DRIED_SEAWEED.get()); //only need .get() for custome items
+                        pOutput.accept(ModItems.UNI.get()); //only need .get() for custome items
                     })
                     .build());
     public static void register(IEventBus eventBus) {
