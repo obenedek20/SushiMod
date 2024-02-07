@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.UNI.get()); //only need .get() for custome items
                         pOutput.accept(ModItems.SALMON_PIECE.get());
                         pOutput.accept(ModItems.TUNA_PIECE.get());
+                        pOutput.accept(ModItems.SUSHI.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {
