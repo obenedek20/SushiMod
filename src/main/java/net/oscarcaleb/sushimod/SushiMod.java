@@ -1,6 +1,7 @@
 package net.oscarcaleb.sushimod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.oscarcaleb.sushimod.item.ModCreativeModeTabs;
 import net.oscarcaleb.sushimod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -27,6 +29,8 @@ public class SushiMod {
 
     public SushiMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
@@ -49,7 +53,10 @@ public class SushiMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.ROE);
+            event.accept(ModItems.SQUID_MEAT);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
