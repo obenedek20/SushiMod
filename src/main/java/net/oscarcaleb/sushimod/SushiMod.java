@@ -17,6 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.oscarcaleb.sushimod.item.ModCreativeModeTabs;
 import net.oscarcaleb.sushimod.item.ModItems;
 import org.slf4j.Logger;
+import net.minecraft.world.item.CreativeModeTabs;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SushiMod.MOD_ID)
@@ -26,13 +27,15 @@ public class SushiMod {
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
-
+    //example comment
     public SushiMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -42,8 +45,6 @@ public class SushiMod {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -53,7 +54,13 @@ public class SushiMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RICE); //rice added to ingredients tab
+            event.accept(ModItems.UNI);
+            event.accept(ModItems.SALMON_PIECE);
+            event.accept(ModItems.TUNA_PIECE);
+            event.accept(ModItems.SUSHI);
+            event.accept(ModItems.AVOCADO);
             event.accept(ModItems.ROE);
             event.accept(ModItems.SQUID_MEAT);
         }
