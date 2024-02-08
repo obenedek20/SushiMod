@@ -57,6 +57,7 @@ public class SushiMod {
             event.accept(ModItems.SALMON_PIECE);
             event.accept(ModItems.TUNA_PIECE);
             event.accept(ModItems.SUSHI);
+            event.accept(ModItems.AVOCADO);
         }
     }
 

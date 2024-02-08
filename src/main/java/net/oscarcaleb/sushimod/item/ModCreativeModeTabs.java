@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SALMON_PIECE.get());
                         pOutput.accept(ModItems.TUNA_PIECE.get());
                         pOutput.accept(ModItems.SUSHI.get());
+                        pOutput.accept(ModItems.AVOCADO.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {
