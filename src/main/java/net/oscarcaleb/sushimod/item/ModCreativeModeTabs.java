@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
+import net.oscarcaleb.sushimod.block.ModBlocks;
 
 
 public class ModCreativeModeTabs {
@@ -27,6 +28,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.AVOCADO.get());
                         pOutput.accept(ModItems.ROE.get());
                         pOutput.accept(ModItems.SQUID_MEAT.get());
+                        pOutput.accept(ModBlocks.SUSHI_TABLE.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

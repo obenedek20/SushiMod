@@ -1,5 +1,12 @@
 {
+  "item.sushimod.rice": "Rice",
+  "item.sushimod.uni": "Uni",
+  "item.sushimod.salmon_piece": "Salmon Piece",
+  "item.sushimod.tuna_piece": "Tuna Piece",
+  "item.sushimod.sushi": "Sushi",
+  "item.sushimod.avocado": "Avocado",
   "item.sushimod.roe" : "Roe",
   "item.sushimod.squid_meat" : "Squid Meat",
-  "creative.tutorial_tab" : "Sushi Tutorial Tab"
+  "block.sushimod.sushi_table": "Sushi Table",
+  "creativetab.sushi_tab": "Sushi Tab"
 }
