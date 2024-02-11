@@ -7,5 +7,7 @@
   "item.sushimod.avocado": "Avocado",
   "item.sushimod.roe" : "Roe",
   "item.sushimod.squid_meat" : "Squid Meat",
+  "block.sushimod.sushi_table": "Sushi Table",
+  "item.sushimod.raw_rice": "Raw Rice",
   "creativetab.sushi_tab": "Sushi Tab"
 }

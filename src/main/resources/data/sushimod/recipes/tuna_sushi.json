@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " __",
+    " ##",
+    " ~~"
+  ],
+  "key": {
+    "#": {
+      "item": "sushimod:rice"
+    },
+    "~": {
+      "item": "minecraft:dried_kelp"
+    },
+    "_": {
+      "item": "sushimod:tuna_piece"
+    }
+  },
+  "result": {
+    "item": "sushimod:sushi",
+    "count": 2
+  }
+}

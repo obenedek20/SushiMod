@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 70,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "minecraft:raw_rice"
+  },
+  "result": "minecraft:rice"
+}
