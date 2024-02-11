@@ -1,5 +1,6 @@
 package net.oscarcaleb.sushimod.item;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.eventbus.api.IEventBus;
