@@ -18,6 +18,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, SushiMod.MOD_ID);
 
+    //add second block by just making new RegistryObject and add to creativemode tab, and add new json files
     public static final RegistryObject<Block> SUSHI_TABLE = registerBlock("sushi_table",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE))); //instead of .copy, can do .of() to make own block
 
