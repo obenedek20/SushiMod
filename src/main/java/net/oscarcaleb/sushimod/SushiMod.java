@@ -65,6 +65,7 @@ public class SushiMod {
             event.accept(ModItems.AVOCADO);
             event.accept(ModItems.ROE);
             event.accept(ModItems.SQUID_MEAT);
+            event.accept(ModItems.RAW_RICE);
         }
     }
 

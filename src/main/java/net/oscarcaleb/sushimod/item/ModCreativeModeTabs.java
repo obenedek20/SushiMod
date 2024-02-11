@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ROE.get());
                         pOutput.accept(ModItems.SQUID_MEAT.get());
                         pOutput.accept(ModBlocks.SUSHI_TABLE.get());
+                        pOutput.accept(ModItems.RAW_RICE.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {
