@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
+import net.oscarcaleb.sushimod.block.ModBlocks;
 
 
 public class ModCreativeModeTabs {
@@ -19,14 +20,19 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RICE.get()))
                     .title(Component.translatable("creativetab.sushi_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        //ITEMS
                         pOutput.accept(ModItems.RICE.get());
-                        pOutput.accept(ModItems.UNI.get()); //only need .get() for custome items
+                        pOutput.accept(ModItems.UNI.get()); //only need .get() for custom items
                         pOutput.accept(ModItems.SALMON_PIECE.get());
                         pOutput.accept(ModItems.TUNA_PIECE.get());
                         pOutput.accept(ModItems.SUSHI.get());
                         pOutput.accept(ModItems.AVOCADO.get());
-                        output.accept(ModItems.ROE.get());
-                        output.accept(ModItems.SQUID_MEAT.get());
+                        pOutput.accept(ModItems.ROE.get());
+                        pOutput.accept(ModItems.SQUID_MEAT.get());
+
+
+                        //BLOCKS
+                        pOutput.accept(ModBlocks.SUSHI_TABLE.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

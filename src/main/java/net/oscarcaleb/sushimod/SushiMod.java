@@ -14,6 +14,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.oscarcaleb.sushimod.block.ModBlocks;
 import net.oscarcaleb.sushimod.item.ModCreativeModeTabs;
 import net.oscarcaleb.sushimod.item.ModItems;
 import org.slf4j.Logger;
@@ -34,6 +35,8 @@ public class SushiMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 
